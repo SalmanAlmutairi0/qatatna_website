@@ -27,6 +27,8 @@ export default function Navbar() {
                     <li className="nav-item">مميزات</li>
                     <li className="nav-item">من نحن ؟</li>
                     <li className="nav-item">تواصل معنا</li>
+                    <li className='nav-item mobile-button'><button>اعلن معنا</button></li>
+                    
                 </ul>
             </div>
 

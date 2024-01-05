@@ -52,7 +52,7 @@ nav {
 
 }
 
-.nav-button {
+.nav-button, .mobile-button button {
     background-color: #fff;
     color: black;
     border: none;
@@ -70,7 +70,7 @@ nav {
     border-bottom: 1px solid white;
 }
 
-.nav-button:hover {
+.nav-button:hover , .mobile-button button:hover {
     border: 1px solid white;
     background-color: transparent;
     color: #fff;
@@ -80,6 +80,9 @@ nav {
     display: none;
 }
 
+.mobile-button {
+    display: none;
+}
 
 
 @media screen and (max-width: 900px) {
@@ -98,6 +101,10 @@ nav {
 
     .nav-container img {
         width: 16%;
+    }
+    .mobile-button {
+        display: block;
+    
     }
 
     .nav-items {
