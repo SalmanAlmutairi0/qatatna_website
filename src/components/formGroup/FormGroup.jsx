@@ -1,5 +1,5 @@
 import React from 'react'
-import './FormGroup.css'
+import './formGroup.css'
 export default function FormGroup({label, type, id}) {
   return (
     <div className="form-group">
