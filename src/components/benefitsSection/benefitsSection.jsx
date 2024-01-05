@@ -3,7 +3,7 @@ import './benefitsSection.css'
 import benefitsSvg from '../../assets/Mask_Group.svg'
 import addUser from '../../assets/benefitsIcons/addUser.png'
 import Budget from '../../assets/benefitsIcons/Budget.png'
-import create from '../../assets/benefitsIcons/create.png'
+import create from '../../assets/benefitsIcons/Create.png'
 import Group from '../../assets/benefitsIcons/Group.png'
 
 const BenefitCard = ({ icon, title, desc,color }) => {
