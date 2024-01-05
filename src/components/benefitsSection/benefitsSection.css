@@ -181,14 +181,14 @@
 
 @media screen and (max-width: 380px) {
     .benfits-title h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .benfits-title p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
     #benefits {
         margin-top: 10rem;
-        height: 120vh;
+        height: 140vh;
     }
 
     .benfits-cards {
