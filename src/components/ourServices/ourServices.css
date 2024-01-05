@@ -1,0 +1,181 @@
+.our-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+    margin-top: 6rem;
+
+
+}
+
+.our-services-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+}
+
+.our-services-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 30%; 
+  }
+
+.services {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 40px;
+}
+
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 40%;
+}
+
+.service-title {
+    font-size: 1.5rem;
+
+    font-weight: bold;
+}
+
+.service-desc {
+    font-size: 1rem;
+    color: #797979;
+    font-weight: 400;
+}
+
+
+.img-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-icon {
+    position: absolute;
+    z-index: 1;
+}
+
+.img-icon img {
+    width: 95%;
+}
+
+@media screen and (max-width: 900px) {
+
+    .our-services-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .our-services-container h1 {
+        width: 30%;
+        font-size: 1.5rem;
+    }
+    
+    .services {
+        flex-direction: row;
+        width: 60%;
+    }
+
+    .service {
+        width: 40%;
+    }
+
+    .service-title {
+     font-size: 1.3rem;
+
+    }
+  
+
+    .service-desc {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+
+    .img-container img {
+        width: 70%;
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .our-services {
+        margin-top: 7rem;
+    }
+    .our-services-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .our-services-container h1 {
+        width: 90%;
+    }
+
+    .services {
+        margin-top: 10%;
+        column-gap: 40px;
+        width: 100%;
+    }
+
+    .service {
+        width: 44%;
+    }
+
+    .service-title {
+        font-size: 1.2rem;
+   
+    }
+     
+   
+    .service-desc {
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+    
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .our-services {
+        margin-top: 10rem;
+    }
+    .service {
+        width: 100%;
+    }
+    .img-container {
+        align-items: start;
+        justify-content: start;
+    }
+
+    .img-container img {
+        width: 40%;
+    }
+    
+    .img-icon {
+        right: 19px;
+        top: 16px;
+    }
+    
+
+
+   
+}

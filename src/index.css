@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DIN Next LT Arabic';
+}
+:root {
+  --purple: #7310FF;
+  --cyan: rgba(3, 204, 227, 1);
+}
+
+body {
+  overflow-x: hidden;
+  /* background-color: #7310FF; */
+}
+
+
+

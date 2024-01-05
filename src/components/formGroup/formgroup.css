@@ -1,0 +1,45 @@
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #4f4f4f;
+}
+
+
+
+.form-group input, textarea {
+    padding: 8px 5px;
+    font-size: 1.1rem;
+    outline: none;
+    width: 100%;
+    border: 1px solid #a3a1a1;
+    border-radius: 5px;
+    
+}
+
+@media screen and (max-width: 1025px) {
+    
+    .contact-us-form label {
+        font-size: 1rem;
+
+    }
+
+    .contact-us-form input {
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    
+    .contact-us-form label {
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+}

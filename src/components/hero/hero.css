@@ -1,0 +1,147 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+
+  }
+  
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+  }
+  
+  .hero-container img {
+    width: 22%;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    width: 50%;    
+  }
+  
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: hsla(0, 0%, 100%, 0.705);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+.hero-botton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.hero-botton button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 14px;
+  background-color: #fff;
+  color: black;
+  font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+.hero-botton button:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+
+
+
+
+.background-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  z-index: -1;
+  overflow: hidden;
+}
+  
+  .background-svg img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover; 
+  }
+  
+  .bottom-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -25%; 
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+  }
+  
+  .bottom-svg img {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+
+  @media screen and (max-width: 900px) {
+
+   
+
+    .hero-content {
+      width: 60%;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .hero-content p {
+      font-size: 1rem;
+    }
+
+    .hero-botton button {
+      font-size: 1.2rem;
+    }
+
+    
+  }
+
+  @media screen and (max-width: 550px) {
+
+    .hero-container img {
+        display: none;
+    }
+
+    .hero-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    .hero-botton {
+        margin: 1rem auto;
+    }
+    
+  }
+
+
+
+ 
+  
