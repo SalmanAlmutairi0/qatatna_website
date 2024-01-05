@@ -1,8 +1,29 @@
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('./assets/Font/ArbFONTS-DINNextLTArabic-Bold-2.ttf') format('truetype'); /* Adjust the path and format accordingly */
+  font-weight: bold;
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('./assets/Font/ArbFONTS-DINNextLTArabic-Medium-3.ttf') format('truetype'); /* Adjust the path and format accordingly */
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: 'DIN Next LT Arabic';
+  src: url('./assets/Font/ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf') format('truetype'); /* Adjust the path and format accordingly */
+  font-weight: light;
+}
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'DIN Next LT Arabic';
+  font-weight: medium;
 }
 :root {
   --purple: #7310FF;
