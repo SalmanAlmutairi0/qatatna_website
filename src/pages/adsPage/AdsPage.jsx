@@ -25,7 +25,6 @@ export default function AdsPage() {
 
           <div className="line"></div>
         
-        
           {/* forms */}
           {/* <CheckForm setStep={setStep}/>  */}
           
