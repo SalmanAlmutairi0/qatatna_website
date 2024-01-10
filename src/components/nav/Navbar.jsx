@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import './navbar.css'
 import logo from '../../assets/logo.png'
 import { Twirl as Hamburger } from 'hamburger-react'
-import { Link as Scroll } from 'react-scroll'
-import {Link } from 'react-router-dom'
-export default function Navbar() {
+import {Link, useLocation } from 'react-router-dom'
+
+export default function Navbar({}) {
     const [isOpen, setIsOpen] = useState(false)
+    
+    const location = useLocation();
+    const currentPage = location.pathname;
+   
 
     useEffect(() => {
         // when the mobile navbar is open prevent the user from scrolling 
@@ -19,34 +23,26 @@ export default function Navbar() {
     
   return (
     <nav>
-        <div className="nav-container">
+        <div className="nav-container" style={currentPage == '/request-ads' ? {backgroundColor: 'var(--purple)'} : null} >
             <img src={logo} alt="" />
 
             <div className="nav-items" style={{left: isOpen ? '0' : '100%'}}>
                 {/* Navigation items */}
                 <ul className="nav-list" >
                     <li className="nav-item">
-                    <Scroll to='home' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
                             الرئيسية
-                    </Scroll>
                     </li>
 
                     <li className="nav-item">
-                    <Scroll to='OurServices' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
                             خدماتنا
-                    </Scroll>
                     </li>
 
                     <li className="nav-item">
-                        <Scroll to='benefitsSection' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
                             كيفية الاستخدام
-                        </Scroll>
                        </li>
 
                     <li className="nav-item">
-                    <Scroll to='contact' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
                             تواصل معنا
-                    </Scroll>
                     </li>
 
                     <li className='nav-item mobile-button'><button>اعلن معنا</button></li>
