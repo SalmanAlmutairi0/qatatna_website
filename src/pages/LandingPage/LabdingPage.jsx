@@ -6,16 +6,25 @@ import BenefitsSection from '../../components/benefitsSection/benefitsSection'
 import MobileSection from '../../components/mobileSection/MobileSection'
 import DownloadSection from '../../components/downloadSection/DownloadSection'
 import Footer from '../../components/footer/Footer'
+import { Element } from 'react-scroll';
 
 export default function LabdingPage() {
   return <>
+  
         <Navbar />
-        <Hero />
-        <OurServices />
-        <BenefitsSection />
+
+        <Element name='home'><Hero /></Element>
+       
+        <Element name='OurServices'><OurServices /></Element>
+
+        <Element name='benefitsSection'><BenefitsSection /></Element>
+        
         <MobileSection />
-        <DownloadSection />
-        <Footer />
+        
+        <Element name='download'><DownloadSection /></Element>
+        
+        <Element name='contact'><Footer /></Element>
+
   
   </>
 }

@@ -3,6 +3,7 @@ import './hero.css'
 import heroMokup from '../../assets/mokup_hero.png'
 import background from '../../assets/Background.svg'
 import bottomSvg  from '../../assets/Decoration.svg'
+import { Link } from 'react-scroll'
 export default function Hero() {
   return <section className='hero'>
         <div className="hero-container">
@@ -10,7 +11,9 @@ export default function Hero() {
                 <h1>تطبيق قطتنا , اجمع وقسم مصاريف الاهل والاصدقاء بسهولة</h1>
                 <p>تطبيق قطتنا هو رفيقك المثالي للخروج مع الاصدقاء حيث يجمع بين السهولة والتنظيم لجعل تجاربك الاجتماعية اكثر متعة و بساطة. بدلاً من التعامل مع التفاصيل المعقدة لتقسيم الفواتير. وجمع النقود, يقوم تطبيق قطتنا بتسهيل هذه العملية بشكل ذكي</p>
                 <div className="hero-botton">
-                    <button>حمل التطبيق</button>
+                    <Link to='download' smooth={true} duration={500}>
+                         <button>حمل التطبيق</button>
+                    </Link>
                 </div>
             </div>
 
