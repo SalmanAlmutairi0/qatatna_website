@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './navbar.css'
 import logo from '../../assets/logo.png'
 import { Twirl as Hamburger } from 'hamburger-react'
-import { Link } from 'react-scroll'
+import { Link as Scroll } from 'react-scroll'
+import {Link } from 'react-router-dom'
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
 
@@ -25,27 +26,27 @@ export default function Navbar() {
                 {/* Navigation items */}
                 <ul className="nav-list" >
                     <li className="nav-item">
-                    <Link to='home' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
+                    <Scroll to='home' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
                             الرئيسية
-                    </Link>
+                    </Scroll>
                     </li>
 
                     <li className="nav-item">
-                    <Link to='OurServices' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
+                    <Scroll to='OurServices' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
                             خدماتنا
-                    </Link>
+                    </Scroll>
                     </li>
 
                     <li className="nav-item">
-                        <Link to='benefitsSection' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
+                        <Scroll to='benefitsSection' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
                             كيفية الاستخدام
-                        </Link>
+                        </Scroll>
                        </li>
 
                     <li className="nav-item">
-                    <Link to='contact' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
+                    <Scroll to='contact' smooth={true} duration={500} onClick={() => setIsOpen(false)}>
                             تواصل معنا
-                    </Link>
+                    </Scroll>
                     </li>
 
                     <li className='nav-item mobile-button'><button>اعلن معنا</button></li>
@@ -53,7 +54,9 @@ export default function Navbar() {
                 </ul>
             </div>
 
-            <button className='nav-button nav-item'>اعلن معنا</button>
+                <Link to='request-ads' >
+                      <button className='nav-button nav-item'>اعلن معنا</button>
+                </Link>
 
             <div className="burger-menu">
                 <Hamburger size={28} color='#fff' onToggle={() => setIsOpen(!isOpen)} />
