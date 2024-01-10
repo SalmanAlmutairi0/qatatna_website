@@ -1,0 +1,35 @@
+.check-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.check-btn {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--purple);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: 0.2s ease;
+
+}
+
+.check-btn:hover {
+    opacity: 1;
+}

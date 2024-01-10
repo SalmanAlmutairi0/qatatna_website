@@ -1,0 +1,54 @@
+.request-ad-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.remaining-hours-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.remaining-hours-container p {
+    font-size: 1.2rem;
+    color: #979797;
+    font-weight: 500;
+}
+
+.remaining-hours-container .remaining-hours {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color : var(--purple);
+}
+
+.request-btn {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--purple);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: 0.2s ease;
+}
+
+.request-btn:hover {
+    opacity: 1;
+}

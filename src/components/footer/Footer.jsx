@@ -16,51 +16,7 @@ export default function Footer() {
       <div className="footer-container">
 
         <ContactUs/>
-        {/* <form className="contact-us-form">
-
-          <div className="form-title">
-            <h1>تواصل معنا</h1>
-          </div>
-
-          <div className="row">
-
-            <div className="form-group">
-              <label className="form-label" htmlFor="full_name">
-                الاسم الكامل
-              </label>
-
-              <input type="text" id="full_name" />
-
-            </div>
-
-            <div className="form-group">
-
-              <label className="form-label" htmlFor="email">
-                البريد الاكتروني
-              </label>
-              
-              <input type="email" id="email" />
-            </div>
-          </div>
-
-          
-
-          <div className="form-group">
-
-            <label htmlFor="message">الرسالة</label>
-            <textarea id="message" rows={4}></textarea>
-
-          </div>
-
-          <div className="submit-wrapr">
-
-            <button type="submit" className="contact-us-btn">
-              ارسل
-            </button>
-
-          </div>
-
-        </form> */}
+        
 
         <div className="company-info">
           <img src={logo} alt="Company Logo" />
