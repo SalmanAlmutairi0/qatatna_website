@@ -44,7 +44,15 @@ export default function Navbar({}) {
             <li className="nav-item">تواصل معنا</li>
 
             <li className="nav-item mobile-button">
-              <button>اعلن معنا</button>
+              {currentPage == "/request-ads" ? (
+                <button>تسجيل خروج</button>
+              ) : (
+                <Link to="request-ads">
+                  <button onClick={() => setIsOpen(false)}>اعلن معنا</button>
+                </Link>
+              )
+              }
+          
             </li>
           </ul>
         </div>
@@ -62,7 +70,8 @@ export default function Navbar({}) {
           <Hamburger
             size={28}
             color="#fff"
-            onToggle={() => setIsOpen(!isOpen)}
+            toggle={() => setIsOpen(!isOpen)}
+            toggled={isOpen}
           />
         </div>
       </div>
