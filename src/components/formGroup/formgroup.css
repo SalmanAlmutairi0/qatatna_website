@@ -23,6 +23,13 @@
     
 }
 
+.form-error {
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0;
+}
+
 @media screen and (max-width: 1025px) {
     
     .contact-us-form label {

@@ -3,32 +3,44 @@ import './adsPage.css'
 import adsBackground from '../../assets/ads_background.svg'
 import CheckForm from './ads_page_Components/forms/checkFrom/CheckForm'
 import RequestAdForm from './ads_page_Components/forms/requestAdForm/RequestAdForm'
+import arrowBack from '../../assets/icons/arrow_back.png'
+import Steps from './ads_page_Components/steps/Steps'
 export default function AdsPage() {
   const [step, setStep] = useState(1)
+  const [checkFormData, setCheckFormData] = useState({
+    first_name: "",
+    last_name: "",
+    company_name: "",
+    email: "",
+    phone: "",
+    date: "",
+    day: "",
+    price: "",
+  });
+
   return (
     <main className='ads-page'>
         <img src={adsBackground}  />
 
         <div className="form-container">
-          
-          <div className="steps">
-            
-            <div className="step">
-              <p style={step >= 1 ? {backgroundColor: 'var(--purple)', color: 'white'} : {backgroundColor: '#ededed'} }>1</p>
-            </div>
-          <div className="step-line" style={{backgroundColor: step >= 2 ? 'var(--purple)' : '#ededed'}}></div>
-            <div className="step">
-              <p style={step >= 2 ? {backgroundColor: 'var(--purple)', color: 'white'} : {backgroundColor: '#ededed'} }>2</p>
-            </div>
 
-          </div>
+          {step == 2 && 
+            <div className="arrow-back" onClick={() => setStep(1)}>
+              <img src={arrowBack} alt="" />
+            </div>
+          }
+          
+        <Steps step={step} />
 
           <div className="line"></div>
         
           {/* forms */}
-          {/* <CheckForm setStep={setStep}/>  */}
+          <div className="forms">
+          {step === 1 ? <CheckForm setStep={setStep} setFormData={setCheckFormData} formData={checkFormData}/>  : <RequestAdForm  />}
+
+          </div>
           
-            <RequestAdForm />
+          
           
         
         </div>

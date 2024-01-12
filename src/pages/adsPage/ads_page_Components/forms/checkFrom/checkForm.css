@@ -7,9 +7,21 @@
     width: 100%;
 }
 
+.check-form .form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.check-form .form-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
 .row {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     width: 100%;
     gap: 20px;
@@ -32,4 +44,39 @@
 
 .check-btn:hover {
     opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .check-form {
+        gap: 10px;
+    }
+    .check-form .form-title h1 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media screen and (max-width: 450px) {
+    .check-form {
+        gap: 10px;
+    }
+    .check-form .form-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    .check-form {
+        gap: 10px;
+    }
+    .check-form .form-title h1 {
+        font-size: 1.5rem;
+    }
+    
 }
