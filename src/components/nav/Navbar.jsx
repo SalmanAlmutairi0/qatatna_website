@@ -35,14 +35,21 @@ export default function Navbar({}) {
         <div className="nav-items" style={{ left: isOpen ? "0" : "100%" }}>
           {/* Navigation items */}
           <ul className="nav-list">
+            <Link to='/' >
             <li className="nav-item">الرئيسية</li>
+            </Link>
 
+            <Link to='/' >
             <li className="nav-item">خدماتنا</li>
+            </Link>
 
+            <Link to='/' >
             <li className="nav-item">كيفية الاستخدام</li>
+            </Link>
 
+            <Link to='/' >
             <li className="nav-item">تواصل معنا</li>
-
+            </Link>
             <li className="nav-item mobile-button">
               {currentPage == "/request-ads" ? (
                 <button>تسجيل خروج</button>

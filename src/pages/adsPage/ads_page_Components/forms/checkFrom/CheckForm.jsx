@@ -17,9 +17,11 @@ export default function CheckForm({setStep, setFormData, formData}) {
      setFormData((prevData) => ({
        ...prevData,
        [id]: value,
-       day: dayOfWeek
+       day: dayOfWeek,
+       price: hourPrice
      }))
     }
+
     
     setFormData((prevData) => ({
       ...prevData,
@@ -59,7 +61,6 @@ export default function CheckForm({setStep, setFormData, formData}) {
   const handleSubmit = (e) => {
     // validation
     e.preventDefault();
-    console.log(formData);
 
     const valid = validateForm(formData, setError);
 
@@ -68,7 +69,7 @@ export default function CheckForm({setStep, setFormData, formData}) {
       setError({})
     }
 
-
+    console.log(formData);
   }
     
   return (
@@ -100,7 +101,6 @@ export default function CheckForm({setStep, setFormData, formData}) {
             type="text"
             id="price"
             disabled={true} 
-            onChange={(e)=>handleChange(e)}
             value={hourPrice}
         />
 
