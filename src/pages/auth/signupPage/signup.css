@@ -1,0 +1,27 @@
+.create-account-btn {
+    width: 100%;
+    background-color: var(--purple);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid var(--purple);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s all ease-in-out;
+}
+
+.create-account-btn:hover {
+    background-color: #fff;
+    color: var(--purple);
+
+} 
+
+.success-message {
+    background-color: lightgreen;
+    color: darkgreen;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
