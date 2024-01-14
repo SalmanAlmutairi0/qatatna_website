@@ -6,7 +6,7 @@ import RequestAdForm from './ads_page_Components/forms/requestAdForm/RequestAdFo
 import arrowBack from '../../assets/icons/arrow_back.png'
 import Steps from './ads_page_Components/steps/Steps'
 export default function AdsPage() {
-  const [step, setStep] = useState(2)
+  const [step, setStep] = useState(1)
   const [checkFormData, setCheckFormData] = useState({
     first_name: "",
     last_name: "",
@@ -21,7 +21,7 @@ export default function AdsPage() {
   const [requestFormData, setRequestFormData] = useState({
     hours: "",
     adType: "",
-    date: "",
+    image: "",
     totalPrice: ""
   })
 
@@ -31,8 +31,8 @@ export default function AdsPage() {
 
         <div className="form-container">
 
-          {step == 2 && 
-            <div className="arrow-back" onClick={() => setStep(1)}>
+          {step >= 2 && 
+            <div className="arrow-back" onClick={() => setStep(() => step - 1)}>
               <img src={arrowBack} alt="" />
             </div>
           }
@@ -44,10 +44,9 @@ export default function AdsPage() {
           {/* forms */}
           <div className="forms">
           {step === 1 ? <CheckForm setStep={setStep} setFormData={setCheckFormData} formData={checkFormData}/>
-          : <RequestAdForm setFormData={setRequestFormData} formData={requestFormData} adDate={checkFormData.date} price={checkFormData.price} />}
+          : <RequestAdForm setFormData={setRequestFormData} formData={requestFormData} adDate={checkFormData.date} price={checkFormData.price} adDay={checkFormData.day} />}
 
           </div>
-          
           
           
         

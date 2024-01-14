@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './requestAdFrom.css'
 import FormGroup from '../../../../../components/formGroup/FormGroup'
-export default function RequestAdForm({setFormData, formData, adDate, price}) {
+export default function RequestAdForm({setFormData, formData, adDate,  price, adDay}) {
     const [error, setError] = useState({})
     console.log(adDate);
     const handleChange = (e) => {
@@ -24,12 +24,21 @@ export default function RequestAdForm({setFormData, formData, adDate, price}) {
     }
 
     const validateForm = (formData, setError) => {
-        if(formData.hours === "" || formData.adType === "" || formData.date === "" ){
+        if(formData.hours === "" || formData.adType === "" || formData.image === ""){
             if(formData.hours === ""){
                 setError((prev)=>({...prev, hours:"* يجب كتابة عدد الساعات"}))
+            }else{
+                setError((prev)=>({...prev, hours:""}))
             }
             if(formData.adType === ""){
                 setError((prev)=>({...prev, adType:"* يجب كتابة نوع الاعلان"}))
+            }else{
+                setError((prev)=>({...prev, adType:""}))
+            }
+            if(formData.image === ""){
+                setError((prev)=>({...prev, image:"* يجب اختيار صورة الاعلان"}))
+            }else{
+                setError((prev)=>({...prev, image:""}))
             }
         
             return false
@@ -41,11 +50,9 @@ export default function RequestAdForm({setFormData, formData, adDate, price}) {
         e.preventDefault();
 
         const valid = validateForm(formData, setError);
-        
+
         if(valid){
             setError({})
-        }else{
-
             console.log(formData);
         }
     }
@@ -56,7 +63,7 @@ export default function RequestAdForm({setFormData, formData, adDate, price}) {
             <h1>طلب اعلان</h1>
         </div>
         <div className="remaining-hours-container">
-            <p >عدد الساعات المتاحة ليوم <span>الخميس</span> الموافق <span>3/2/2022</span></p>
+            <p >عدد الساعات المتاحة ليوم <span>{adDay}</span> الموافق <span>{adDate}</span></p>
 
             <h3 className='remaining-hours'>الساعات المتبقية <span>10</span> ساعات</h3>
         </div>
@@ -67,7 +74,7 @@ export default function RequestAdForm({setFormData, formData, adDate, price}) {
         </div>
 
         <div className="row">
-           <FormGroup label="تاريخ الاعلان" type="date" id="date" disabled={true} value={adDate}  onChange={(e) => handleChange(e)}/>
+           <FormGroup label="صورة الاعلان" type="file" id="image"  value={formData.image} error={error.image}  onChange={(e) => handleChange(e)}/>
             <FormGroup label="المبلغ الاجمالي" type="text" id="totalPrice" disabled={true} value={formData.totalPrice}  onChange={(e) => handleChange(e)}/>
         </div>
 
