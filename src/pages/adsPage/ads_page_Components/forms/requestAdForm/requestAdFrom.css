@@ -52,3 +52,34 @@
 .request-btn:hover {
     opacity: 1;
 }
+
+@media  screen and (max-width: 750px) {
+    .remaining-hours-container p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .remaining-hours-container .remaining-hours {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    
+}
+
+@media screen and (max-width: 380px) {
+    
+    .form-title {
+        font-size: 1.3rem;
+    }
+
+    .remaining-hours-container p {
+        font-size: 1rem;
+    }
+
+    .remaining-hours-container .remaining-hours {
+        font-size: 1.2rem;
+    }
+
+    
+}
