@@ -74,6 +74,7 @@ export default function Signup() {
         <h1>انشاء حساب</h1>
       </div>
 
+    {/* show a success message if the user created account successfully */}
     {success &&
       <div className="success-message">
         <p>تم انشاء الحساب نجاح ✅</p>
