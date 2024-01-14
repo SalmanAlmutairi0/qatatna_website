@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AdsPage from "./pages/adsPage/AdsPage";
 import Navbar from "./components/nav/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="request-ads" element={<AdsPage />} />
         </Routes>
+        <Footer />
   </>
   );
 }

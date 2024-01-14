@@ -4,7 +4,6 @@ import OurServices from '../../components/ourServices/OurServices'
 import BenefitsSection from '../../components/benefitsSection/benefitsSection'
 import MobileSection from '../../components/mobileSection/MobileSection'
 import DownloadSection from '../../components/downloadSection/DownloadSection'
-import Footer from '../../components/footer/Footer'
 
 
 export default function LandingPage() {
@@ -14,7 +13,6 @@ export default function LandingPage() {
         <BenefitsSection />
         <MobileSection />
         <DownloadSection />
-        <Footer />
   
   </>
 }
