@@ -36,19 +36,19 @@ export default function Navbar({}) {
           {/* Navigation items */}
           <ul className="nav-list">
             <Link to='/' >
-            <li className="nav-item">الرئيسية</li>
+            <li className="nav-item" onClick={() => setIsOpen(false)}>الرئيسية</li>
             </Link>
 
             <Link to='/' >
-            <li className="nav-item">خدماتنا</li>
+            <li className="nav-item" onClick={() => setIsOpen(false)}>خدماتنا</li>
             </Link>
 
             <Link to='/' >
-            <li className="nav-item">كيفية الاستخدام</li>
+            <li className="nav-item" onClick={() => setIsOpen(false)}>كيفية الاستخدام</li>
             </Link>
 
             <Link to='/' >
-            <li className="nav-item">تواصل معنا</li>
+            <li className="nav-item" onClick={() => setIsOpen(false)}>تواصل معنا</li>
             </Link>
             <li className="nav-item mobile-button">
               {currentPage == "/request-ads" ? (
