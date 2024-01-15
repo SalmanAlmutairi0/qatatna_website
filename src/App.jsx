@@ -4,7 +4,7 @@ import Navbar from "./components/nav/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import Footer from "./components/footer/Footer";
 import Login from "./pages/auth/loginPage/Login";
-import Signup from "./pages/auth/signupPage/signup";
+import Signup from "./pages/auth/signupPage/Signup";
 import Orders from "./pages/orders/Orders";
 import Profile from "./pages/profile/Profile";
 
