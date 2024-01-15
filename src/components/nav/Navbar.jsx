@@ -3,6 +3,7 @@ import "./navbar.css";
 import logo from "../../assets/logo.png";
 import { Twirl as Hamburger } from "hamburger-react";
 import { Link, useLocation } from "react-router-dom";
+import DropDown from "./dropDownMenu/DropDown";
 
 export default function Navbar({}) {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,7 @@ export default function Navbar({}) {
             </Link>
             <li className="nav-item mobile-button">
               {currentPage == "/request-ads" ? (
-                <button>تسجيل خروج</button>
+                <DropDown />
               ) : (
                 <Link to="request-ads">
                   <button onClick={() => setIsOpen(false)}>اعلن معنا</button>
@@ -66,7 +67,7 @@ export default function Navbar({}) {
 
 
         {currentPage == "/request-ads" ? (
-          <button className="nav-button nav-item">تسجيل خروج</button>
+          <DropDown />
         ) : (
           <Link to="request-ads">
             <button className="nav-button nav-item">اعلن معنا</button>
