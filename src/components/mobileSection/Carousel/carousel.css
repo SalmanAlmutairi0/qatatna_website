@@ -29,19 +29,7 @@
 
 
 .slick-dots li button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px !important;
-    color: black;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    background: transparent;
-    padding: 15px;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-
+    display: none;
 }
 
 .slick-dots li.slick-active button {
