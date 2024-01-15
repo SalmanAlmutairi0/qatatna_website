@@ -1,0 +1,44 @@
+#orders {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    gap: 1rem;
+    backdrop-filter: blur(15px);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.top-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 20px 0;
+}
+
+.top-section .orders-title {
+    font-weight: 600;
+    font-size: 2rem;
+
+}
+
+.orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+    margin: 10px 0;
+    max-height: 400px;
+    overflow-y: scroll;
+}

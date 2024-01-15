@@ -26,7 +26,7 @@ export default function Navbar({}) {
       <div
         className="nav-container"
         style={
-          currentPage == "/request-ads"
+          currentPage !== "/"
             ? { backgroundColor: "var(--purple)" }
             : null
         }
@@ -52,7 +52,7 @@ export default function Navbar({}) {
             <li className="nav-item" onClick={() => setIsOpen(false)}>تواصل معنا</li>
             </Link>
             <li className="nav-item mobile-button">
-              {currentPage == "/request-ads" ? (
+              {currentPage !== "/" ? (
                 <DropDown />
               ) : (
                 <Link to="request-ads">
@@ -66,7 +66,7 @@ export default function Navbar({}) {
         </div>
 
 
-        {currentPage == "/request-ads" ? (
+        {currentPage !== "/" ? (
           <DropDown />
         ) : (
           <Link to="request-ads">
