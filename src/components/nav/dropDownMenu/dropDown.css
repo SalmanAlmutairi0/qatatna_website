@@ -61,12 +61,12 @@
 
 }
 
-.drop-down-list li {
+.drop-down-list a li {
     padding: 2px 0;
     transition: .2s all ease-in-out;
 }
 
-.drop-down-list li a {
+.drop-down-list a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
@@ -98,7 +98,7 @@
     color: var(--purple);
 }
 
-.drop-down-list li a:hover {
+.drop-down-list a:hover {
     color: var(--purple);
 }
 
@@ -109,6 +109,13 @@
 
 .drop-down-content:hover{
     display: flex;
+}
+
+@media screen and (max-width: 900px) {
+    
+    .drop-down-menu {
+        display: none;
+    }
 }
 
 

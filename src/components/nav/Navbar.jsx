@@ -31,7 +31,9 @@ export default function Navbar({}) {
             : null
         }
       >
+       <Link to={'/'}>
         <img src={logo} alt="" />
+       </Link>
 
         <div className="nav-items" style={{ left: isOpen ? "0" : "100%" }}>
           {/* Navigation items */}
@@ -52,13 +54,25 @@ export default function Navbar({}) {
             <li className="nav-item" onClick={() => setIsOpen(false)}>تواصل معنا</li>
             </Link>
             <li className="nav-item mobile-button">
-              {currentPage !== "/" ? (
-                <DropDown />
-              ) : (
+              {currentPage === "/" ? 
                 <Link to="request-ads">
-                  <button onClick={() => setIsOpen(false)}>اعلن معنا</button>
+                <button onClick={() => setIsOpen(false)}>اعلن معنا</button>
+              </Link>
+
+              :(
+                // if the user is in a mobile view and he is not in the landing page show extra links 
+                <>
+                <Link to={"/profile"}>
+                  <li className="nav-item" onClick={() => setIsOpen(false)}>الملف الشخصي</li>
                 </Link>
-              )
+                <Link to={"/orders"}>
+                 <li className="nav-item" onClick={() => setIsOpen(false)}>طلباتي</li>
+                </Link>
+                <Link to={'#'}>
+                  <button >تسجيل الخروج</button>
+                </Link>
+                </>
+                )
               }
           
             </li>
