@@ -1,0 +1,67 @@
+/* .wrapper {
+    position: relative;
+} */
+
+.profile-background {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 10px;
+    gap: 1rem;
+
+}
+
+.update-profile-btn {
+    width: 100%;
+    background-color: var(--purple);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 0;
+    border: 1px solid var(--purple);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s all ease-in-out;
+
+}
+
+.update-profile-btn:hover {
+    background-color: #fff;
+    color: var(--purple);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .profile-form {
+        width: 60%;
+    }
+
+    
+}
+
+@media screen and (max-width: 768px) {
+    .profile-form {
+        width: 80%;
+    }
+
+    .profile-form .form-title {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .profile-form .form-title {
+        font-size: 1rem;
+    }
+} 

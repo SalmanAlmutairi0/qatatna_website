@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import Login from "./pages/auth/loginPage/Login";
 import Signup from "./pages/auth/signupPage/signup";
 import Orders from "./pages/orders/Orders";
+import Profile from "./pages/profile/Profile";
 
 function App() {
   const location = useLocation();
@@ -26,7 +27,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="request-ads" element={<AdsPage />} />
           <Route path="orders" element={<Orders />} />
-          {/* <Route path="signup" element={<Signup />} /> */}
+          <Route path="profile" element={<Profile />} />
         </Routes>
         <Footer />
   </>
